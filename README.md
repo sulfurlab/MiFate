@@ -3,8 +3,9 @@
 
 MiFate is a genome-informed pipeline for predicting the persistence of microbial genomes (MAGs) in wastewater treatment plants (WWTPs). It integrates protein prediction, KEGG annotation, KO matrix construction, and model-based prediction to determine which MAGs are likely removable or persistent.
 
-<img width="75%" height="75%" alt="ceb3b55ec0c45091e338b9ca2a7bf9d8" src="https://github.com/user-attachments/assets/0b9cf8eb-8efa-4485-90f6-ece07bc6a20e" />
-
+<center>
+  <img width="75%" height="75%" alt="ceb3b55ec0c45091e338b9ca2a7bf9d8" src="https://github.com/user-attachments/assets/0b9cf8eb-8efa-4485-90f6-ece07bc6a20e" />
+<center>
 ## Repository Structure
 
 ```
