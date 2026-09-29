@@ -1,0 +1,19 @@
+{
+  "stage": "SEC",
+  "n_train": 4869,
+  "n_features": 8926,
+  "metric": "mean 5-nearest binary Jaccard distances",
+  "preprocessing": "raw binary KO; no scaler/PCA/filter beyond supplied 8,926 features",
+  "q95": 0.6146133303642272,
+  "q99": 0.6694117069244384,
+  "model_sha256": "4ddcdf4868b961cf765d88267dff6a4252f8ed5a31708392b67853575dbe3f32",
+  "reference_sha256": "1c7276fe3f760477d30c36fc5f6dea8af8e9959ee19b9cb040461c1b59106262",
+  "training_input_sha256": "993f769ffaf60c36eb370ade04b23c7a2d277aa7ee3ea53c878e21f792ceb360",
+  "split_file": "validation/SEC_split.csv",
+  "threshold_policy": {
+    "attenuation_max": 0.49907273054122925,
+    "retention_min": 0.5009139776229858,
+    "max_domain_percentile": 99,
+    "threshold_source": "new Train80 ten-fold OOF; >=30 accepted/class, <=25% class error"
+  }
+}

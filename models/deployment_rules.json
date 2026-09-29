@@ -1,0 +1,14 @@
+{
+  "SEC": {
+    "attenuation_max": 0.49907273054122925,
+    "retention_min": 0.5009139776229858,
+    "max_domain_percentile": 99,
+    "threshold_source": "new Train80 ten-fold OOF; >=30 accepted/class, <=25% class error"
+  },
+  "DIS": {
+    "attenuation_max": 0.49913260340690613,
+    "retention_min": 0.8531948328018188,
+    "max_domain_percentile": 99,
+    "threshold_source": "new Train80 ten-fold OOF; >=30 accepted/class, <=25% class error"
+  }
+}

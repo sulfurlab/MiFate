@@ -1,0 +1,549 @@
+{
+  "random_seed": 20260929,
+  "input_sha256": {
+    "ko": "993f769ffaf60c36eb370ade04b23c7a2d277aa7ee3ea53c878e21f792ceb360",
+    "abundance": "70627d96554356fa8051b121b24f3fd11e0098252fd83e01d01c754598fe1d51",
+    "metadata": "fb034b17464b815ca264299e548a420499f6491af8a763e9087b010bf2a4f220",
+    "quality": "87ff1ce6f8c2e25a457053e5e7d9f54674b08809659f1be54b50a26433166f59",
+    "taxonomy": "21f1a5c9df08d8402759217237e8fe82d1d70df6baa3fbbf524c7fd2fe493148",
+    "who": "d9c23540eb0d01667fcbed6009d04b9fedafe9966aabed5e6ae15eea21d7a53b"
+  },
+  "xgboost_version": "2.1.4",
+  "model_parameters": {
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "max_depth": 4,
+    "eta": 0.05,
+    "max_bin": 16,
+    "min_child_weight": 5,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "lambda": 5,
+    "alpha": 0,
+    "eval_metric": "logloss",
+    "nthread": 6,
+    "seed": 20260929
+  },
+  "response_definition": "mean of replicate samples per WWTP endpoint, EFF/INF when mean INF >0.001%, median over >=2 WWTPs; <0.1 attenuation, >=0.4 retention",
+  "feature_count": 8926,
+  "training_matrix_genomes": 7890,
+  "training_quality_boundary": [
+    {
+      "MAG": "SRR13003746.17",
+      "Completeness": 57.0,
+      "Contamination": 10.0
+    }
+  ],
+  "note": "New stratified split and frozen model; it is not the previously published/returned model.",
+  "stages": {
+    "SEC": {
+      "counts": {
+        "Relative attenuation": 4213,
+        "Relative retention": 1874,
+        "Unlabeled": 1455,
+        "Intermediate": 348
+      },
+      "paired_WWTPs": 46,
+      "train_n": 4869,
+      "test_n": 1218,
+      "Train80_OOF_pooled": {
+        "n": 4869,
+        "positive": 1499,
+        "AUROC": 0.9678800703931206,
+        "average_precision": 0.9166963081377749,
+        "accuracy_at_0.5": 0.9145615116040254
+      },
+      "Train80_OOF_folds": [
+        {
+          "fold": 1,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9693966369930761,
+          "average_precision": 0.9340999674027732,
+          "accuracy_at_0.5": 0.9158110882956879
+        },
+        {
+          "fold": 2,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9577250247279921,
+          "average_precision": 0.9197590381440927,
+          "accuracy_at_0.5": 0.9075975359342916
+        },
+        {
+          "fold": 3,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9772106824925817,
+          "average_precision": 0.9218309640050191,
+          "accuracy_at_0.5": 0.9342915811088296
+        },
+        {
+          "fold": 4,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9619584569732937,
+          "average_precision": 0.8914831598991141,
+          "accuracy_at_0.5": 0.9137577002053389
+        },
+        {
+          "fold": 5,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9680316518298714,
+          "average_precision": 0.9087111385808928,
+          "accuracy_at_0.5": 0.8870636550308009
+        },
+        {
+          "fold": 6,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9718892185954502,
+          "average_precision": 0.9129039030530076,
+          "accuracy_at_0.5": 0.919917864476386
+        },
+        {
+          "fold": 7,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9786152324431255,
+          "average_precision": 0.9593681535354948,
+          "accuracy_at_0.5": 0.9363449691991786
+        },
+        {
+          "fold": 8,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9749950544015826,
+          "average_precision": 0.9351910919067868,
+          "accuracy_at_0.5": 0.919917864476386
+        },
+        {
+          "fold": 9,
+          "n": 487,
+          "positive": 150,
+          "AUROC": 0.9645103857566765,
+          "average_precision": 0.9242835792270746,
+          "accuracy_at_0.5": 0.917864476386037
+        },
+        {
+          "fold": 10,
+          "n": 486,
+          "positive": 149,
+          "AUROC": 0.9585167187780056,
+          "average_precision": 0.8952486994436091,
+          "accuracy_at_0.5": 0.8930041152263375
+        }
+      ],
+      "OOF_threshold_diagnostics": {
+        "attenuation_max": 0.49907273054122925,
+        "attenuation_max_oof_n": 3146,
+        "attenuation_max_oof_error": 0.030514939605848695,
+        "retention_min": 0.5009139776229858,
+        "retention_min_oof_n": 1723,
+        "retention_min_oof_error": 0.1857225769007545
+      },
+      "Test20": {
+        "n": 1218,
+        "positive": 375,
+        "AUROC": 0.9683258204824041,
+        "average_precision": 0.9171580069375739,
+        "accuracy_at_0.5": 0.9113300492610837
+      },
+      "Test20_domain_outside_n": 8,
+      "Test20_accepted_n": 1210,
+      "Test20_accepted_error": 0.0884297520661157,
+      "domain_q99_distance": 0.6694117069244384,
+      "Train80_genus_blocked": {
+        "pooled": {
+          "n": 4869,
+          "positive": 1499,
+          "AUROC": 0.9576928634915858,
+          "average_precision": 0.8957902667282276,
+          "accuracy_at_0.5": 0.8995686999383857
+        },
+        "folds": [
+          {
+            "n": 973,
+            "positive": 299,
+            "AUROC": 0.9615483858162222,
+            "average_precision": 0.9026124639255272,
+            "accuracy_at_0.5": 0.9075025693730729,
+            "fold": 1
+          },
+          {
+            "n": 976,
+            "positive": 301,
+            "AUROC": 0.962938353636028,
+            "average_precision": 0.8869175345081858,
+            "accuracy_at_0.5": 0.8975409836065574,
+            "fold": 2
+          },
+          {
+            "n": 974,
+            "positive": 300,
+            "AUROC": 0.9514144411473788,
+            "average_precision": 0.8937788599654447,
+            "accuracy_at_0.5": 0.9075975359342916,
+            "fold": 3
+          },
+          {
+            "n": 972,
+            "positive": 299,
+            "AUROC": 0.9606514036386767,
+            "average_precision": 0.9111181412074936,
+            "accuracy_at_0.5": 0.8981481481481481,
+            "fold": 4
+          },
+          {
+            "n": 974,
+            "positive": 300,
+            "AUROC": 0.9529673590504452,
+            "average_precision": 0.8941819479617463,
+            "accuracy_at_0.5": 0.8870636550308009,
+            "fold": 5
+          }
+        ],
+        "n_groups": 1342
+      },
+      "Train80_family_blocked": {
+        "pooled": {
+          "n": 4869,
+          "positive": 1499,
+          "AUROC": 0.9502982205743493,
+          "average_precision": 0.8819403049927038,
+          "accuracy_at_0.5": 0.8915588416512631
+        },
+        "folds": [
+          {
+            "n": 974,
+            "positive": 300,
+            "AUROC": 0.9633877349159249,
+            "average_precision": 0.9278158652614498,
+            "accuracy_at_0.5": 0.9240246406570842,
+            "fold": 1
+          },
+          {
+            "n": 981,
+            "positive": 303,
+            "AUROC": 0.9626011273693741,
+            "average_precision": 0.9154540469928141,
+            "accuracy_at_0.5": 0.9051987767584098,
+            "fold": 2
+          },
+          {
+            "n": 973,
+            "positive": 299,
+            "AUROC": 0.9428212736818078,
+            "average_precision": 0.8553728502923201,
+            "accuracy_at_0.5": 0.8787255909558068,
+            "fold": 3
+          },
+          {
+            "n": 970,
+            "positive": 298,
+            "AUROC": 0.9338047299456697,
+            "average_precision": 0.8412350996770598,
+            "accuracy_at_0.5": 0.8670103092783505,
+            "fold": 4
+          },
+          {
+            "n": 971,
+            "positive": 299,
+            "AUROC": 0.950375258799172,
+            "average_precision": 0.881367704127259,
+            "accuracy_at_0.5": 0.88259526261586,
+            "fold": 5
+          }
+        ],
+        "n_groups": 529
+      },
+      "Test20_family_bootstrap": {
+        "method": "2,000 family-level resamples with replacement; all genomes of each selected family retained",
+        "n_replicates": 2000,
+        "n_families": 306,
+        "percentile_95CI": {
+          "AUROC": [
+            0.9544075887237841,
+            0.9796412427788342
+          ],
+          "coverage": [
+            0.9889649180149261,
+            0.9974711224722486
+          ],
+          "error_if_accepted": [
+            0.062104267845057765,
+            0.11344882614342541
+          ]
+        },
+        "valid_replicates": {
+          "AUROC": 2000,
+          "coverage": 2000,
+          "error_if_accepted": 2000
+        }
+      }
+    },
+    "DIS": {
+      "counts": {
+        "Relative attenuation": 5172,
+        "Unlabeled": 1611,
+        "Relative retention": 722,
+        "Intermediate": 385
+      },
+      "paired_WWTPs": 62,
+      "train_n": 4715,
+      "test_n": 1179,
+      "Train80_OOF_pooled": {
+        "n": 4715,
+        "positive": 578,
+        "AUROC": 0.8980443177569625,
+        "average_precision": 0.5741111968888033,
+        "accuracy_at_0.5": 0.8595970307529163
+      },
+      "Train80_OOF_folds": [
+        {
+          "fold": 1,
+          "n": 472,
+          "positive": 58,
+          "AUROC": 0.8867649508579044,
+          "average_precision": 0.5197737098317013,
+          "accuracy_at_0.5": 0.8559322033898306
+        },
+        {
+          "fold": 2,
+          "n": 472,
+          "positive": 58,
+          "AUROC": 0.902048975512244,
+          "average_precision": 0.49182901205869045,
+          "accuracy_at_0.5": 0.8495762711864406
+        },
+        {
+          "fold": 3,
+          "n": 472,
+          "positive": 58,
+          "AUROC": 0.9034232883558221,
+          "average_precision": 0.599063060285106,
+          "accuracy_at_0.5": 0.8580508474576272
+        },
+        {
+          "fold": 4,
+          "n": 472,
+          "positive": 58,
+          "AUROC": 0.9049225387306347,
+          "average_precision": 0.6052360125609209,
+          "accuracy_at_0.5": 0.875
+        },
+        {
+          "fold": 5,
+          "n": 472,
+          "positive": 58,
+          "AUROC": 0.8985507246376812,
+          "average_precision": 0.5933499725289909,
+          "accuracy_at_0.5": 0.8580508474576272
+        },
+        {
+          "fold": 6,
+          "n": 471,
+          "positive": 57,
+          "AUROC": 0.9255021612001018,
+          "average_precision": 0.7026339735735129,
+          "accuracy_at_0.5": 0.8492569002123143
+        },
+        {
+          "fold": 7,
+          "n": 471,
+          "positive": 57,
+          "AUROC": 0.8709212645139418,
+          "average_precision": 0.5301819475531941,
+          "accuracy_at_0.5": 0.8535031847133758
+        },
+        {
+          "fold": 8,
+          "n": 471,
+          "positive": 58,
+          "AUROC": 0.900392418802705,
+          "average_precision": 0.5972217171724445,
+          "accuracy_at_0.5": 0.8683651804670913
+        },
+        {
+          "fold": 9,
+          "n": 471,
+          "positive": 58,
+          "AUROC": 0.8789346246973366,
+          "average_precision": 0.6145307409908624,
+          "accuracy_at_0.5": 0.8577494692144374
+        },
+        {
+          "fold": 10,
+          "n": 471,
+          "positive": 58,
+          "AUROC": 0.921557986140102,
+          "average_precision": 0.6291714713463016,
+          "accuracy_at_0.5": 0.8704883227176221
+        }
+      ],
+      "OOF_threshold_diagnostics": {
+        "attenuation_max": 0.49913260340690613,
+        "attenuation_max_oof_n": 3815,
+        "attenuation_max_oof_error": 0.04456094364351245,
+        "retention_min": 0.8531948328018188,
+        "retention_min_oof_n": 169,
+        "retention_min_oof_error": 0.2485207100591716
+      },
+      "Test20": {
+        "n": 1179,
+        "positive": 144,
+        "AUROC": 0.9038446054750402,
+        "average_precision": 0.6482670773457168,
+        "accuracy_at_0.5": 0.8592027141645462
+      },
+      "Test20_domain_outside_n": 5,
+      "Test20_accepted_n": 987,
+      "Test20_accepted_error": 0.04457953394123604,
+      "domain_q99_distance": 0.6729405558109276,
+      "Train80_genus_blocked": {
+        "pooled": {
+          "n": 4715,
+          "positive": 578,
+          "AUROC": 0.8666385634576315,
+          "average_precision": 0.4948575795072666,
+          "accuracy_at_0.5": 0.8528101802757158
+        },
+        "folds": [
+          {
+            "n": 940,
+            "positive": 114,
+            "AUROC": 0.888003908075273,
+            "average_precision": 0.5717140065742637,
+            "accuracy_at_0.5": 0.8638297872340426,
+            "fold": 1
+          },
+          {
+            "n": 940,
+            "positive": 114,
+            "AUROC": 0.8693874516800476,
+            "average_precision": 0.4912629670396064,
+            "accuracy_at_0.5": 0.8425531914893617,
+            "fold": 2
+          },
+          {
+            "n": 952,
+            "positive": 120,
+            "AUROC": 0.871474358974359,
+            "average_precision": 0.44587000701878454,
+            "accuracy_at_0.5": 0.8623949579831933,
+            "fold": 3
+          },
+          {
+            "n": 942,
+            "positive": 115,
+            "AUROC": 0.850092003574996,
+            "average_precision": 0.4650537284272646,
+            "accuracy_at_0.5": 0.8471337579617835,
+            "fold": 4
+          },
+          {
+            "n": 941,
+            "positive": 115,
+            "AUROC": 0.8582903463522477,
+            "average_precision": 0.5565722597396796,
+            "accuracy_at_0.5": 0.8480340063761955,
+            "fold": 5
+          }
+        ],
+        "n_groups": 1299
+      },
+      "Train80_family_blocked": {
+        "pooled": {
+          "n": 4715,
+          "positive": 578,
+          "AUROC": 0.8475099804030302,
+          "average_precision": 0.457231624779498,
+          "accuracy_at_0.5": 0.8375397667020148
+        },
+        "folds": [
+          {
+            "n": 943,
+            "positive": 116,
+            "AUROC": 0.8348830421548595,
+            "average_precision": 0.4554381501007509,
+            "accuracy_at_0.5": 0.8525980911983033,
+            "fold": 1
+          },
+          {
+            "n": 943,
+            "positive": 115,
+            "AUROC": 0.8493908842680109,
+            "average_precision": 0.4403612717476074,
+            "accuracy_at_0.5": 0.8430540827147401,
+            "fold": 2
+          },
+          {
+            "n": 941,
+            "positive": 115,
+            "AUROC": 0.863680387409201,
+            "average_precision": 0.5184106152308385,
+            "accuracy_at_0.5": 0.8289054197662061,
+            "fold": 3
+          },
+          {
+            "n": 941,
+            "positive": 115,
+            "AUROC": 0.8343615117380777,
+            "average_precision": 0.4438474523662486,
+            "accuracy_at_0.5": 0.842720510095643,
+            "fold": 4
+          },
+          {
+            "n": 947,
+            "positive": 117,
+            "AUROC": 0.8599320358356504,
+            "average_precision": 0.459378125087795,
+            "accuracy_at_0.5": 0.8204857444561774,
+            "fold": 5
+          }
+        ],
+        "n_groups": 485
+      },
+      "Test20_family_bootstrap": {
+        "method": "2,000 family-level resamples with replacement; all genomes of each selected family retained",
+        "n_replicates": 2000,
+        "n_families": 283,
+        "percentile_95CI": {
+          "AUROC": [
+            0.8707690550068387,
+            0.9329241879410558
+          ],
+          "coverage": [
+            0.7957467951903011,
+            0.8728280432607948
+          ],
+          "error_if_accepted": [
+            0.0301900166258399,
+            0.06135822584378225
+          ]
+        },
+        "valid_replicates": {
+          "AUROC": 2000,
+          "coverage": 2000,
+          "error_if_accepted": 2000
+        }
+      }
+    }
+  },
+  "runtime_versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0",
+    "xgboost": "2.1.4"
+  },
+  "WHO_feature_alignment": {
+    "model_KOs": 8926,
+    "WHO_KOs": 9059,
+    "shared": 7856,
+    "model_columns_zero_filled": 1070,
+    "WHO_columns_ignored": 1203
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "DIS",
+  "n_train": 4715,
+  "n_features": 8926,
+  "metric": "mean 5-nearest binary Jaccard distances",
+  "preprocessing": "raw binary KO; no scaler/PCA/filter beyond supplied 8,926 features",
+  "q95": 0.6157428443431855,
+  "q99": 0.6729405558109276,
+  "model_sha256": "50694bc974c664f5301be2e229588bad21542219d08f91eecc3ca2da4e7407f0",
+  "reference_sha256": "17b7baeab7040426e75f18abe172af092d2a5d2786b3ea8268b36675972e2713",
+  "training_input_sha256": "993f769ffaf60c36eb370ade04b23c7a2d277aa7ee3ea53c878e21f792ceb360",
+  "split_file": "validation/DIS_split.csv",
+  "threshold_policy": {
+    "attenuation_max": 0.49913260340690613,
+    "retention_min": 0.8531948328018188,
+    "max_domain_percentile": 99,
+    "threshold_source": "new Train80 ten-fold OOF; >=30 accepted/class, <=25% class error"
+  }
+}

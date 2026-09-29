@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+data/
+results/
+outputs/
+work/
+*.faa
+*.fna
+*.fasta
+*.fa
+*.kofam.tsv
+*.log

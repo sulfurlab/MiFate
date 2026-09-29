@@ -1,0 +1,4 @@
+*.npz binary
+*.json text
+*.py text
+*.md text
