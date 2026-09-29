@@ -1,0 +1,50 @@
+{
+  "SEC": {
+    "method": "2,000 family-level resamples with replacement; all genomes of each selected family retained",
+    "n_replicates": 2000,
+    "n_families": 306,
+    "percentile_95CI": {
+      "AUROC": [
+        0.9544075887237841,
+        0.9796412427788342
+      ],
+      "coverage": [
+        0.9889649180149261,
+        0.9974711224722486
+      ],
+      "error_if_accepted": [
+        0.062104267845057765,
+        0.11344882614342541
+      ]
+    },
+    "valid_replicates": {
+      "AUROC": 2000,
+      "coverage": 2000,
+      "error_if_accepted": 2000
+    }
+  },
+  "DIS": {
+    "method": "2,000 family-level resamples with replacement; all genomes of each selected family retained",
+    "n_replicates": 2000,
+    "n_families": 283,
+    "percentile_95CI": {
+      "AUROC": [
+        0.8707690550068387,
+        0.9329241879410558
+      ],
+      "coverage": [
+        0.7957467951903011,
+        0.8728280432607948
+      ],
+      "error_if_accepted": [
+        0.0301900166258399,
+        0.06135822584378225
+      ]
+    },
+    "valid_replicates": {
+      "AUROC": 2000,
+      "coverage": 2000,
+      "error_if_accepted": 2000
+    }
+  }
+}
