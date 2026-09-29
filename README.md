@@ -50,4 +50,4 @@ Missing model KOs are set to zero; extra KOs are ignored. The matrix should use 
 
 ## Model version
 
-This package contains the **2026-09-29 retrained models**; their predictions can differ from the earlier repository release, which is preserved in `legacy/2026-05/`. The original training matrix lacks raw KOfamScan hit records, so exact annotation compatibility for new FASTA inputs still needs verification. See [MODEL_CARD.md](MODEL_CARD.md) for model details and this limitation.
+This package contains the **2026-09-29 retrained models**; their predictions can differ from the earlier repository release, which remains available in the Git history. The original training matrix lacks raw KOfamScan hit records, so exact annotation compatibility for new FASTA inputs still needs verification. See [MODEL_CARD.md](MODEL_CARD.md) for model details and this limitation.
